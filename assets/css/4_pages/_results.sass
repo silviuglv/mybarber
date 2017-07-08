@@ -1,0 +1,94 @@
+
+// RESULTS PAGE
+
+.resultsHeader
+  display: block
+  position: relative
+  background-color: white
+  padding: 20px
+  vertical-align: middle
+  border-bottom: 1px solid black
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  .filterCta
+    width: 120px
+    display: inline-block
+    margin-top: 0
+    padding: 14px 0
+    & .innerBtn::after
+      content: 'show filters'
+      line-height: 30px
+
+.logoContainer
+  display: inline-block
+  width: 180px
+  .cls-1
+    fill: black
+  .cls-2
+    fill: black
+
+
+
+// MAP
+
+.map
+  background-color: white
+  position: absolute
+  width: 100%
+  height: 100%
+
+
+
+
+// INFO WINDOW
+.gm-style-iw
+  pointer-events: all !important
+  width: 150px !important
+  top: 15px !important
+  left: 20px !important
+  box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6)
+  background-color: #fff
+  border-radius: 8px
+
+.iw-container
+  width: 150px
+
+
+.iw-title
+  background: $brown
+  color: white
+  padding: 2px 5px
+  .icon
+    position: absolute
+    top: 3px
+    right: 5px
+    &:hover
+      cursor: pointer
+
+.iw-details
+  margin: 5px
+
+.iw-address
+  display: block
+  margin-top: 10px
+
+.iw-status, .iw-rating
+  display: inline-block
+  text-transform: uppercase
+  margin: 10px 0px
+
+.iw-status
+  float: right
+
+.open
+  color: green
+
+.close
+  color: red
+
+.iw-cta
+  margin-top: 10px
+  background: black
+  @include button(100%, 12px 0px, 'get details', 8px, white, 26px)

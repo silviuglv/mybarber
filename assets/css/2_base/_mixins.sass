@@ -1,0 +1,38 @@
+
+=button($width, $padding, $content, $fsize, $color, $line)
+  width: $width
+  padding: $padding
+  position: relative
+  overflow: hidden
+  text-align: center
+  & .innerBtn::after
+    content: $content
+    text-transform: uppercase
+    background: $brown
+    font-size: $fsize
+    font-weight: 700
+    color: $color
+    line-height: $line
+    height: 0px
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    transition: height 0.3s ease-in-out
+
+
+.underline
+  content: ''
+  background: black
+  height: 2px
+  width: 0
+  position: absolute
+  bottom: 0
+  left: auto
+  right: 0
+  transition: width 0.6s ease-in-out
+
+.underlineHover
+  width: 100%
+  right: auto
+  left: 0

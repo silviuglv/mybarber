@@ -1,0 +1,110 @@
+<!--          MODAL              -->
+
+<div id="modal" class="modalWrapper">
+  <div class="modalContainer">
+
+    <!-- Close ICON -->
+
+    <div class="iconClose"><span class="icon ion-close-round" id="modalClose"></span></div>
+
+    <!-- Main Form -->
+    <div class="scrollWrapper">
+    <div class="formWrapper">
+      <form action="/barbershops" method="GET" id="getResults">
+      <!-- First part -->
+    <div class="formContainer">
+      <div class="mainPart">
+        <div class="formIcon">
+          <i class="icon ion-navigate"></i>
+        </div>
+        <!-- <div class="placeholder"></div> -->
+        <div class="addressText" id="adrHolder">
+          <input type="text" name="lat" value="" id="lat" hidden>
+          <input type="text" name="lng" value="" id="lng" hidden>
+          <label for="location" id="locationLabel">Current location</label></div>
+        <div class="line"></div>
+      </div>
+      <div class="mainPart">
+        <div class="formIcon">
+          <i class="icon ion-ionic"></i>
+        </div>
+        <div class="placeholder"></div>
+        <div class="addressText BTN" id="radiusCta">
+          <span id="radiusBtn">Select radius</span>
+          <div id="arrowWrapper" class="arrowWrapper">
+            <i class="icon ion-ios-arrow-down"></i>
+          </div>
+
+        </div>
+        <div class="line">
+          <div class="radiusContainer">
+            <div class="radiusOption radiusInactive" id="radiusContent">
+              <span class="radiusChoiceHolder">
+                <input type="radio" value="800" id="01" name="radius" required hidden />
+                <label for="01" class="radiusChoice" onclick="radiusSwitch(1)">0.5 mi</label>
+              </span>
+              <span class="radiusChoiceHolder">
+                <input type="radio" value="1600" id="02" name="radius" hidden>
+                <label for="02" class="radiusChoice" onclick="radiusSwitch(2)">1.0 mi</label>
+              </span>
+              <span class="radiusChoiceHolder">
+                <input type="radio" value="3200" id="03" name="radius" hidden>
+                <label for="03" class="radiusChoice" onclick="radiusSwitch(3)">2.0 mi</label>
+              </span>
+              <span class="radiusChoiceHolder">
+                <input type="radio" value="4800" id="04" name="radius" hidden>
+                <label for="04" class="radiusChoice" onclick="radiusSwitch(4)">3.0 mi</label>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter part -->
+
+    <div class="filterContainer">
+      <div class="innerFilter">
+
+        <span class="filterTitle"><h6>Sort by:</h6></span>
+        <span class="choice">
+          <input type="radio" name="sortBy" value="prominence" id="sortBy01" checked hidden>
+          <label for="sortBy01">prominence</label>
+        </span>
+        <span class="choice">
+          <input type="radio" name="sortBy" value="nearby" id="sortBy02" hidden>
+        <label for="sortBy02">nearby</label>
+      </span>
+      </div>
+
+      <div class="innerFilter">
+        <span class="filterTitle"><h6>filter by</h6></span>
+        <span class="choice">
+          <input type="radio" name="filterBy" value="allShops" id="filterBy01" checked hidden>
+          <label for="filterBy01">all shops</label>
+        </span>
+        <span class="choice">
+          <input type="radio" name="filterBy" value="openNow" id="filterBy02" hidden>
+          <label for="filterBy02">open now</label>
+        </span>
+
+      </div>
+    </div>
+
+    <!-- Buttons part -->
+
+    <div class="btnContainer">
+      <div class="button submitCta" id="formSubmit">
+        <span class="innerBtn">
+        </span>
+      </div>
+      <div class="button filterCta" id="formFilter">
+        <span class="innerBtn">
+        </span>
+      </div>
+    </div>
+  </form>
+    </div>
+  </div>
+  </div>
+</div>
